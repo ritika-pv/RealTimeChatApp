@@ -1,0 +1,42 @@
+<!-- with the help of websocket birectional comm can hppn....now server  can also emit the event and client can listen and take action -->
+<!-- no need to store every new msg in db  and then what if msg comes back after 1 hour
+    will you request again and again in every minute for checking the further updates (if a new msg has come or not)-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width,initial-scale=1.0">
+        <title>Realtime Node Socket.io Chat App</title>
+             <!-- standalone built exposed by server-->
+             <!-- <script src="http://localhost:3000/socket.io/socket.io.js"></script> -->
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav>
+            <img class="logo" src="chatImg.png" alt="">
+        </nav>
+        <div class="container">
+           
+        </div>
+        <div class="send" id="send-container">
+            <textarea  id="messageInp" cols="30" rows="1"  placeholder="Write a message...."></textarea>
+           
+        </div>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="client.js"></script>
+        <!-- <script>
+
+        var socket = io()
+        console.log(socket)
+        io.on('connection', (socket) => {
+  console.log('a user connected');
+  socket.on('disconnect', () => {
+    console.log('user disconnected');
+  });
+});
+
+        </script> -->
+        
+    </body>
+</html>
